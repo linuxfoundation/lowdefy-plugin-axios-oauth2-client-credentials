@@ -8,11 +8,13 @@ This repository is a Lowdefy 4 plugin that provides a new Connection, axios-oaut
 
 ## Usage
 
-This plugin is not released to any NPM repositories as a package. Rather, it is expected to be added to a Lowdefy monorepo under the plugins/ folder (e.g. using Git submodules). For more information on Lowdefy monorepos, please read the documentation for at (lowdefy-example-plugins)[https://github.com/lowdefy/lowdefy-example-plugins]. For more information on Git submodules, please refer to (Pro Git)[https://git-scm.com/book/en/v2/Git-Tools-Submodules].
+This plugin is not released to any NPM repositories as a package. Rather, it is expected to be added to a Lowdefy monorepo under the plugins/ folder (e.g. using Git submodules). For more information on Lowdefy monorepos, please read the documentation for at [lowdefy-example-plugins](https://github.com/lowdefy/lowdefy-example-plugins). For more information on Git submodules, please refer to [Pro Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+### Example
 
 **auth.tokenUrl**, **auth.clientId**, and **auth.clientSecret** are REQUIRED parameters for the connection. **auth.endpointParams** is optional.
 
-### Example
+The OAuth2 client\_credentials configuration MUST be on the connection definition, not the request.
 
 ```yaml
 ---
@@ -59,8 +61,6 @@ pages:
         properties:
           url: /hello
 ```
-
-The OAuth2 client\_credentials configuration MUST be on the connection definition, not in the request.
 
 ## Design
 
