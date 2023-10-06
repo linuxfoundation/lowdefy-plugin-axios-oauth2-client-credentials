@@ -1,0 +1,16 @@
+# Copyright The Linux Foundation and each contributor.
+# SPDX-License-Identifier: MIT
+---
+env:
+  es2021: true
+  node: true
+extends:
+  - airbnb-base
+rules:
+  # Camelcase and dangling _ are useful to name functions to match their
+  # Lowdefy names.
+  camelcase: 0
+  no-underscore-dangle: 0
+  # Per Lowdefy docs, exported names must match function names referenced in
+  # types.js.
+  import/prefer-default-export: 0

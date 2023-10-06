@@ -1,0 +1,12 @@
+# Copyright The Linux Foundation and each contributor.
+# SPDX-License-Identifier: MIT
+
+node_modules/
+# Normally, committing the package lockfile is a best practice; however, the
+# expected deployment of this repo is as a subfolder of a pnpm monorepo.
+# Therefore, no lockfiles should be present, with the exception of installing
+# dependencies to run lint/tests, and these are not going to be committed to
+# version control.
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
