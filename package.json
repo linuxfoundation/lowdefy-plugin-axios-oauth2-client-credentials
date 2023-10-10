@@ -1,6 +1,6 @@
 {
   "name": "lowdefy-plugin-axios-oauth2-client-credentials",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -14,12 +14,12 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "axios": "1.2.2",
-    "@lowdefy/connection-axios-http": "4.0.0-rc.10",
+    "axios": "*",
+    "@lowdefy/connection-axios-http": "*",
     "node-cache": "^5.1.2"
   },
   "devDependencies": {
-    "eslint": "^8.47.0",
+    "eslint": "^8.51.0",
     "eslint-config-airbnb-base": "^15.0.0"
   }
 }
