@@ -18,7 +18,7 @@ The OAuth2 client\_credentials configuration MUST be on the connection definitio
 
 ```yaml
 ---
-lowdefy: 4.0.0-rc.10
+lowdefy: 4.0.0-rc.12
 # [...]
 plugins:
   - name: 'lowdefy-plugin-axios-oauth2-client-credentials'
