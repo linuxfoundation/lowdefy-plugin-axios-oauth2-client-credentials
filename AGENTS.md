@@ -1,13 +1,13 @@
 # AGENTS.md — lowdefy-plugin-axios-oauth2-client-credentials
 
-## What this repo is
+## What this repository is
 
 A Lowdefy 4 plugin that adds an `AxiosOAuth2ClientCredentials` connection type. It extends the
 built-in `@lowdefy/connection-axios-http` connection to support the OAuth2 **client credentials
 grant** flow: a client ID and secret are exchanged for a Bearer token, which is cached in memory
 and transparently refreshed on expiry.
 
-This repo is not published to npm. It is consumed as a **Git submodule** inside a Lowdefy
+This repository is not published to npm. It is consumed as a **Git submodule** inside a Lowdefy
 monorepo (e.g. under `plugins/`), referenced with `version: 'workspace:*'` in `lowdefy.yaml`.
 
 ## Source layout
@@ -38,7 +38,7 @@ src/
 | `@lowdefy/connection-axios-http` | Base connection; pinned to `^4.7.3` to match parent monorepo |
 | `axios` | HTTP client; pinned to `^1.15.2` |
 | `node-cache` | In-memory token cache |
-| `eslint` + `eslint-config-airbnb-base` | Dev: linting |
+| ESLint + `eslint-config-airbnb-base` | Dev: linting |
 
 ## Development
 
