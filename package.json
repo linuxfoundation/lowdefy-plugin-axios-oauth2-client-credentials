@@ -11,15 +11,20 @@
     "src/*"
   ],
   "scripts": {
-    "lint": "eslint src"
+    "lint": "eslint src && prettier src --check",
+    "lint:fix": "eslint --fix src && prettier src --write",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier src --write"
   },
   "dependencies": {
     "axios": "^1.15.2",
-    "@lowdefy/connection-axios-http": "^5.1.0",
+    "@lowdefy/connection-axios-http": "^5.3.0",
     "node-cache": "^5.1.2"
   },
   "devDependencies": {
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0"
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.0"
   }
 }

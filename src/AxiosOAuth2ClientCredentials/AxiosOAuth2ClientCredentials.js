@@ -1,11 +1,10 @@
 // Copyright The Linux Foundation and each contributor.
 // SPDX-License-Identifier: MIT
 
-// eslint-disable-next-line import/no-unresolved
-import { AxiosHttp } from '@lowdefy/connection-axios-http/connections';
-import NodeCache from 'node-cache';
-import axios from 'axios';
-import { promisify } from 'node:util';
+import { AxiosHttp } from "@lowdefy/connection-axios-http/connections";
+import NodeCache from "node-cache";
+import axios from "axios";
+import { promisify } from "node:util";
 
 const cache = new NodeCache();
 
@@ -22,7 +21,6 @@ async function newBearerToken(auth, cacheKey) {
     }
     lockWait = true;
     // Sleep for 120ms before we test lock again.
-    // eslint-disable-next-line no-await-in-loop
     await sleep(120);
   }
 
@@ -38,7 +36,7 @@ async function newBearerToken(auth, cacheKey) {
   // Our turn to fetch a new token.
   let response;
   const data = {
-    grant_type: 'client_credentials',
+    grant_type: "client_credentials",
     client_id: auth.clientId,
     client_secret: auth.clientSecret,
     ...auth.endpointParams,
@@ -56,7 +54,11 @@ async function newBearerToken(auth, cacheKey) {
   // Cache the token response body.
   if (response.data.expires_in !== undefined) {
     // Cache for 60 seconds less than the token expiry.
-    cache.set(`bearer-token/${cacheKey}`, response.data, response.data.expires_in - 60);
+    cache.set(
+      `bearer-token/${cacheKey}`,
+      response.data,
+      response.data.expires_in - 60,
+    );
   }
 
   // Unlock.
@@ -67,9 +69,9 @@ async function newBearerToken(auth, cacheKey) {
 
 async function bearerToken(auth) {
   let cacheKey = auth.clientId;
-  if (typeof auth.endpointParams === 'object' && auth.endpointParams !== null) {
+  if (typeof auth.endpointParams === "object" && auth.endpointParams !== null) {
     // Compute a cache-key from the values of any additional params (like audience!).
-    cacheKey = `${auth.clientId}-${Object.values(auth.endpointParams).join('-')}`;
+    cacheKey = `${auth.clientId}-${Object.values(auth.endpointParams).join("-")}`;
   }
 
   // Attempt to fetch from cache.

@@ -2,6 +2,6 @@
 // SPDX-License-Identifier: MIT
 
 export default {
-  connections: ['AxiosOAuth2ClientCredentials'],
-  requests: ['AxiosOAuth2ClientCredentials'],
+  connections: ["AxiosOAuth2ClientCredentials"],
+  requests: ["AxiosOAuth2ClientCredentials"],
 };
