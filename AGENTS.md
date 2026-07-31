@@ -35,7 +35,7 @@ src/
 
 | Package | Role |
 |---|---|
-| `@lowdefy/connection-axios-http` | Base connection; pinned to `^4.7.3` to match parent monorepo |
+| `@lowdefy/connection-axios-http` | Base connection; pinned to `^5.4.0` to match parent monorepo |
 | `axios` | HTTP client; pinned to `^1.15.2` |
 | `node-cache` | In-memory token cache |
 | ESLint + `eslint-config-airbnb-base` | Dev: linting |
