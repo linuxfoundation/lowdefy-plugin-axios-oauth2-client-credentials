@@ -3,7 +3,7 @@
 
 import { AxiosHttp } from "@lowdefy/connection-axios-http/connections";
 
-import AxiosOAuth2ClientCredentials from "./AxiosOAuth2ClientCredentials/AxiosOAuth2ClientCredentials";
+import AxiosOAuth2ClientCredentials from "./AxiosOAuth2ClientCredentials/AxiosOAuth2ClientCredentials.js";
 
 // Shallow copy schema, including properties.
 const connectionSchema = { ...AxiosHttp.schema };

@@ -1,6 +1,6 @@
 {
   "name": "lowdefy-plugin-axios-oauth2-client-credentials",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "type": "module",
   "exports": {
