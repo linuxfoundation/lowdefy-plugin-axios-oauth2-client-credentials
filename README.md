@@ -2,7 +2,7 @@
 
 ## About
 
-This repository is a Lowdefy 4 plugin that provides a new Connection, axios-oauth2-client-credentials. This supports the OAuth2 "client credentials grant" workflow, where a Client ID and Client Secret are exchanged for an access token, used as Bearer token to authenticate access to a protected API.  These access tokens typically expire and must be re-granted by the authorization server throughout the application runtime, and therefore cannot be configured at build time in Lowdefy using HTTP headers.
+This repository is a Lowdefy 4 (or later) plugin that provides a new Connection, axios-oauth2-client-credentials. This supports the OAuth2 "client credentials grant" workflow, where a Client ID and Client Secret are exchanged for an access token, used as Bearer token to authenticate access to a protected API.  These access tokens typically expire and must be re-granted by the authorization server throughout the application runtime, and therefore cannot be configured at build time in Lowdefy using HTTP headers.
 
 **This is a community effort, and is not developed or supported by Lowdefy, Inc.**
 
@@ -18,7 +18,7 @@ The OAuth2 client\_credentials configuration MUST be on the connection definitio
 
 ```yaml
 ---
-lowdefy: 5.4.0
+lowdefy: 6.2.0
 # [...]
 plugins:
   - name: 'lowdefy-plugin-axios-oauth2-client-credentials'

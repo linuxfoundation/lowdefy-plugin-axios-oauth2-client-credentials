@@ -51,6 +51,14 @@ No lockfile is committed (see `.gitignore`) — the lockfile lives at the root o
 monorepo. When adding or changing dependencies, pin explicit semver ranges in `package.json`
 rather than using `*`.
 
+## Keeping the README in sync
+
+The README states a minimum supported Lowdefy version ("Lowdefy 4 (or later) plugin") and its
+code example pins a `lowdefy:` version in the sample `lowdefy.yaml`. When bumping the
+`@lowdefy/connection-axios-http` dependency in `package.json`, also update the README's code
+example `lowdefy:` version to match the new pinned version, so the documentation never drifts
+from the dependency that is actually pinned.
+
 ## Versioning & releases
 
 Bump `version` in `package.json` for any meaningful change. The consuming monorepo references
