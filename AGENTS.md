@@ -2,7 +2,7 @@
 
 ## What this repository is
 
-A Lowdefy 4 plugin that adds an `AxiosOAuth2ClientCredentials` connection type. It extends the
+A Lowdefy 6 plugin that adds an `AxiosOAuth2ClientCredentials` connection type. It extends the
 built-in `@lowdefy/connection-axios-http` connection to support the OAuth2 **client credentials
 grant** flow: a client ID and secret are exchanged for a Bearer token, which is cached in memory
 and transparently refreshed on expiry.
@@ -35,8 +35,8 @@ src/
 
 | Package | Role |
 |---|---|
-| `@lowdefy/connection-axios-http` | Base connection; pinned to `^5.4.0` to match parent monorepo |
-| `axios` | HTTP client; pinned to `^1.15.2` |
+| `@lowdefy/connection-axios-http` | Base connection; pinned to `^6.2.0` to match parent monorepo |
+| `axios` | HTTP client; pinned to `^1.20.0` |
 | `node-cache` | In-memory token cache |
 | ESLint + `eslint-config-airbnb-base` | Dev: linting |
 
