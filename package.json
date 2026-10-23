@@ -1,6 +1,6 @@
 {
   "name": "lowdefy-plugin-axios-oauth2-client-credentials",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -17,8 +17,8 @@
     "prettier:fix": "prettier src --write"
   },
   "dependencies": {
-    "axios": "^1.15.2",
-    "@lowdefy/connection-axios-http": "^5.4.0",
+    "axios": "^1.20.0",
+    "@lowdefy/connection-axios-http": "^6.2.0",
     "node-cache": "^5.1.2"
   },
   "devDependencies": {
