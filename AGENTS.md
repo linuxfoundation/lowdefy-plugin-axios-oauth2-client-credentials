@@ -30,6 +30,11 @@ src/
 - Tokens are cached **in-memory per node** for their `expires_in` lifetime. A mutex prevents
   concurrent token requests at startup or on expiry.
 - No token introspection — works with opaque tokens, JWTs, etc.
+- The Lowdefy server loads this plugin with Node's native ESM loader, not a bundler, so every
+  relative import must use the full file path including the `.js` extension (e.g.
+  `./AxiosOAuth2ClientCredentials.js`). Extensionless or directory imports fail at server
+  startup with `ERR_MODULE_NOT_FOUND` or `ERR_UNSUPPORTED_DIR_IMPORT`. Each `exports` entry in
+  `package.json` must likewise point at a file, not a directory.
 
 ## Dependencies
 
@@ -38,7 +43,7 @@ src/
 | `@lowdefy/connection-axios-http` | Base connection; pinned to `^6.2.0` to match parent monorepo |
 | `axios` | HTTP client; pinned to `^1.20.0` |
 | `node-cache` | In-memory token cache |
-| ESLint + `eslint-config-airbnb-base` | Dev: linting |
+| ESLint + `eslint-config-prettier`, Prettier | Dev: linting and formatting |
 
 ## Development
 
@@ -53,10 +58,11 @@ rather than using `*`.
 
 ## Keeping the README in sync
 
-The README states a minimum supported Lowdefy version ("Lowdefy 4 (or later) plugin") and its
+The README references the supported Lowdefy version in more than one place: the "About"
+section names the Lowdefy major version this plugin targets ("Lowdefy 6 plugin"), and the
 code example pins a `lowdefy:` version in the sample `lowdefy.yaml`. When bumping the
-`@lowdefy/connection-axios-http` dependency in `package.json`, also update the README's code
-example `lowdefy:` version to match the new pinned version, so the documentation never drifts
+`@lowdefy/connection-axios-http` dependency in `package.json`, update every Lowdefy version
+reference in the README to match the new pinned version, so the documentation never drifts
 from the dependency that is actually pinned.
 
 ## Versioning & releases
